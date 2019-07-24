@@ -1,0 +1,48 @@
+body img{
+
+    background-color: white;
+        height: 400px ;
+        opacity: 0.8;
+        background-size: cover; 
+        width:100%;
+       
+    }
+  
+    
+    
+    
+       .img1 img{
+           height:300px;
+           padding-bottom: 30px;
+       }
+    
+    
+    
+       .img2 img{
+        height:300px;
+        padding-bottom: 30px;
+        
+    }
+    
+    .container h1{
+        color:black;
+        box-shadow: 10px;
+    }
+    
+    
+    .container h2{
+        padding-left: 30px;
+        color:black;
+    }
+    
+    
+    .container p{
+        padding-left: 30px;
+        text-align: justify;
+        padding-right: 30px;
+    }
+
+    p{
+        font-family: sans-serif;
+        font-size: 18px;
+    }

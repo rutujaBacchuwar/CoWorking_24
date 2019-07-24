@@ -1,0 +1,32 @@
+
+
+<app-navbar> </app-navbar>
+
+<body>
+
+    <div class="container" *ngFor="let data of arrayOfCategory">
+        <div class="row" style="font-family: sans-serif">
+
+            <div class="col-xl-12 col-l-8 col-sm-6 col-xs-2" id="heading">
+                <!-- <h2 style="font-family: sans-serif" style="text-align:left">
+                    <strong>Category : {{data.categoryName}} </strong>
+                </h2> -->
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card">
+                <h4 class="card-text-heading"> Space Id :{{data.mySpace.spaceId}}</h4>
+                <h4 class="card-text" >Space Name: {{data.mySpace.spaceName}}</h4>
+                <!-- <h4 class="card-text">Category: {{ data.categoryName }}</h4> -->
+                <h4 class="card-text">Location: {{ data.mylocation.locationName }}</h4> 
+                <img class=" card-img-top " src= {{data.mySpace.spaceImageUrl}} alt=" Card image cap " width="250" height="250">
+              
+            <p> <button (click)="click(data.mySpace.spaceName)" routerLinkActive="active" type="button" class="btn btn-sm btn-info">View</button></p>
+        
+        </div>
+        </div>
+        
+    </div>
+</body>
+<app-footer></app-footer>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../config-server/config-server.iml" filepath="$PROJECT_DIR$/../config-server/config-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/../eureka-server/eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ibm-wave5-coworking.iml" filepath="$PROJECT_DIR$/../ibm-wave5-coworking.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../login-service/login-service.iml" filepath="$PROJECT_DIR$/../login-service/login-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user-service.iml" filepath="$PROJECT_DIR$/user-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../zuul-gatewayservice/zuul-gatewayservice.iml" filepath="$PROJECT_DIR$/../zuul-gatewayservice/zuul-gatewayservice.iml" />
+    </modules>
+  </component>
+</project>

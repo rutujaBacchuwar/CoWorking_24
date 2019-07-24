@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:4200/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>CoWorkingApp</title>
+  <!--<base href="/">--><base href=".">
+  <link rel="stylesheet" href="./CoWorkingApp_files/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="http://localhost:4200/favicon.ico">
+<style type="text/css">/* You can add global styles to this file, and also import other style files */
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9zdHlsZXMuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDhFQUE4RSIsImZpbGUiOiJzcmMvc3R5bGVzLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qIFlvdSBjYW4gYWRkIGdsb2JhbCBzdHlsZXMgdG8gdGhpcyBmaWxlLCBhbmQgYWxzbyBpbXBvcnQgb3RoZXIgc3R5bGUgZmlsZXMgKi9cbiJdfQ== */</style><style>
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIn0= */</style><style>.navbar[_ngcontent-ngc-c1] {
+    min-height: 100px;
+    
+  }
+  .navbar-brand[_ngcontent-ngc-c1]{
+      
+			padding-left: 120px;
+			padding-top: 0px;
+			padding-bottom: 0px;
+  }
+  .nav-item[_ngcontent-ngc-c1] {
+    font-size: 20px;
+    padding-left: 10px;
+  }
+  
+  .login[_ngcontent-ngc-c1]{
+		padding-right: 120px;
+		padding-left: 20px;
+	}
+  .masthead[_ngcontent-ngc-c1] {
+    height: 100vh;
+    min-height: 500px;
+    
+    background-image: url('landing_page.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .col[_ngcontent-ngc-c1]{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+  .details[_ngcontent-ngc-c1]{
+  font-size: 18px;
+}
+  .page-footer[_ngcontent-ngc-c1]{
+  padding-top: 50px;
+}
+  .contact-us[_ngcontent-ngc-c1]{
+  padding-left: 190px;
+}
+  
+  body[_ngcontent-ngc-c1]
+{
+	background:#00bcd4;
+}
+  h1[_ngcontent-ngc-c1]
+{
+	color:black;
+	margin:40px 0 60px 0;
+	font-weight:300;
+}
+  .our-team-main[_ngcontent-ngc-c1]
+{
+	width:100%;
+	height:auto;
+	border-bottom:5px #323233 solid;
+	background:#fff;
+	text-align:center;
+	border-radius:10px;
+	overflow:hidden;
+	position:relative;
+	transition:0.5s;
+	margin-bottom:28px;
+}
+  .our-team-main[_ngcontent-ngc-c1]   img[_ngcontent-ngc-c1]
+{
+	border-radius:50%;
+	margin-bottom:20px;
+	width: 90px;
+}
+  .our-team-main[_ngcontent-ngc-c1]   h3[_ngcontent-ngc-c1]
+{
+	font-size:20px;
+	font-weight:700;
+}
+  .our-team-main[_ngcontent-ngc-c1]   p[_ngcontent-ngc-c1]
+{
+	margin-bottom:0;
+}
+  .team-back[_ngcontent-ngc-c1]
+{
+	width:100%;
+	height:auto;
+	position:absolute;
+	top:0;
+	left:0;
+	padding:5px 15px 0 15px;
+	text-align:left;
+	background:#fff;
+	
+}
+  .team-front[_ngcontent-ngc-c1]
+{
+	width:100%;
+	height:auto;
+	position:relative;
+	z-index:10;
+	background:#fff;
+	padding:15px;
+	bottom:0px;
+	transition: all 0.5s ease;
+}
+  .our-team-main[_ngcontent-ngc-c1]:hover   .team-front[_ngcontent-ngc-c1]
+{
+	bottom:-200px;
+	transition: all 0.5s ease;
+}
+  .our-team-main[_ngcontent-ngc-c1]:hover
+{
+	border-color:#777;
+	transition:0.5s;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbmF2YmFyL25hdmJhci5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJDQUFDO0lBQ0csaUJBQWlCOztFQUVuQjtFQUNBO01BQ0kscUJBQXFCO0dBQ3hCLG1CQUFtQjtHQUNuQixnQkFBZ0I7R0FDaEIsbUJBQW1CO0VBQ3BCO0VBQ0E7SUFDRSxlQUFlO0lBQ2Ysa0JBQWtCO0VBQ3BCO0VBQ0E7O0lBRUU7RUFFSDtFQUNDLG9CQUFvQjtFQUNwQixrQkFBa0I7Q0FDbkI7RUFFQztJQUNFLGFBQWE7SUFDYixpQkFBaUI7SUFDakIseUtBQXlLO0lBQ3pLLHlDQUErQztJQUMvQyxzQkFBc0I7SUFDdEIsMkJBQTJCO0lBQzNCLDRCQUE0QjtFQUM5QjtFQUNGO0VBQ0UsaUJBQWlCO0VBQ2pCLG9CQUFvQjtBQUN0QjtFQUVBO0VBQ0UsZUFBZTtBQUNqQjtFQUVBO0VBQ0UsaUJBQWlCO0FBQ25CO0VBRUE7RUFDRSxtQkFBbUI7QUFDckI7RUFFQSxjQUFjO0VBRWQ7O0NBRUMsa0JBQWtCO0FBQ25CO0VBRUE7O0NBRUMsV0FBVztDQUNYLG9CQUFvQjtDQUNwQixlQUFlO0FBQ2hCO0VBRUE7O0NBRUMsVUFBVTtDQUNWLFdBQVc7Q0FDWCwrQkFBK0I7Q0FDL0IsZUFBZTtDQUNmLGlCQUFpQjtDQUNqQixrQkFBa0I7Q0FDbEIsZUFBZTtDQUNmLGlCQUFpQjtDQUNqQixlQUFlO0NBQ2Ysa0JBQWtCO0FBQ25CO0VBR0E7O0NBRUMsaUJBQWlCO0NBQ2pCLGtCQUFrQjtDQUNsQixXQUFXO0FBQ1o7RUFFQTs7Q0FFQyxjQUFjO0NBQ2QsZUFBZTtBQUNoQjtFQUVBOztDQUVDLGVBQWU7QUFDaEI7RUFFQTs7Q0FFQyxVQUFVO0NBQ1YsV0FBVztDQUNYLGlCQUFpQjtDQUNqQixLQUFLO0NBQ0wsTUFBTTtDQUNOLHVCQUF1QjtDQUN2QixlQUFlO0NBQ2YsZUFBZTs7QUFFaEI7RUFFQTs7Q0FFQyxVQUFVO0NBQ1YsV0FBVztDQUNYLGlCQUFpQjtDQUNqQixVQUFVO0NBQ1YsZUFBZTtDQUNmLFlBQVk7Q0FDWixVQUFVO0NBQ1YseUJBQXlCO0FBQzFCO0VBRUE7O0NBRUMsYUFBYTtDQUNiLHlCQUF5QjtBQUMxQjtFQUVBOztDQUVDLGlCQUFpQjtDQUNqQixlQUFlO0FBQ2hCO0VBRUEsZ0JBQWdCIiwiZmlsZSI6InNyYy9hcHAvbmF2YmFyL25hdmJhci5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiIC5uYXZiYXIge1xuICAgIG1pbi1oZWlnaHQ6IDEwMHB4O1xuICAgIFxuICB9XG4gIC5uYXZiYXItYnJhbmR7XG4gICAgICAvKiBmb250LXNpemU6IDQwcHg7ICovXG5cdFx0XHRwYWRkaW5nLWxlZnQ6IDEyMHB4O1xuXHRcdFx0cGFkZGluZy10b3A6IDBweDtcblx0XHRcdHBhZGRpbmctYm90dG9tOiAwcHg7XG4gIH1cbiAgLm5hdi1pdGVtIHtcbiAgICBmb250LXNpemU6IDIwcHg7XG4gICAgcGFkZGluZy1sZWZ0OiAxMHB4O1xuICB9ICBcbiAgLyogLm5hdmJhci1yaWdodHtcbiAgICBwYWRkaW5nLXJpZ2h0OiAxMjBweDtcblx0fSAqL1xuXHRcblx0LmxvZ2lue1xuXHRcdHBhZGRpbmctcmlnaHQ6IDEyMHB4O1xuXHRcdHBhZGRpbmctbGVmdDogMjBweDtcblx0fVxuXG4gIC5tYXN0aGVhZCB7XG4gICAgaGVpZ2h0OiAxMDB2aDtcbiAgICBtaW4taGVpZ2h0OiA1MDBweDtcbiAgICAvKiBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoXCJodHRwczovL2ltZy1wcm9kLWNtcy1ydC1taWNyb3NvZnQtY29tLmFrYW1haXplZC5uZXQvY21zL2FwaS9hbS9pbWFnZUZpbGVEYXRhL1JFMjhnY3A/dmVyPWJlNzAmcT05MCZtPTImaD03Njgmdz0xMDI0JmI9JTIzRkZGRkZGRkYmYWltPXRydWVcIik7ICovXG4gICAgYmFja2dyb3VuZC1pbWFnZTogdXJsKFwiaW1hZ2UvbGFuZGluZ19wYWdlLmpwZ1wiKTtcbiAgICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xuICAgIGJhY2tncm91bmQtcG9zaXRpb246IGNlbnRlcjtcbiAgICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xuICB9XG4uY29se1xuICBwYWRkaW5nLXRvcDogNTBweDtcbiAgcGFkZGluZy1ib3R0b206IDUwcHg7XG59XG5cbi5kZXRhaWxze1xuICBmb250LXNpemU6IDE4cHg7XG59XG5cbi5wYWdlLWZvb3RlcntcbiAgcGFkZGluZy10b3A6IDUwcHg7XG59XG5cbi5jb250YWN0LXVze1xuICBwYWRkaW5nLWxlZnQ6IDE5MHB4O1xufVxuXG4vKiBjYXJkcyBjc3MgKi9cblxuYm9keVxue1xuXHRiYWNrZ3JvdW5kOiMwMGJjZDQ7XG59XG5cbmgxXG57XG5cdGNvbG9yOmJsYWNrO1xuXHRtYXJnaW46NDBweCAwIDYwcHggMDtcblx0Zm9udC13ZWlnaHQ6MzAwO1xufVxuXG4ub3VyLXRlYW0tbWFpblxue1xuXHR3aWR0aDoxMDAlO1xuXHRoZWlnaHQ6YXV0bztcblx0Ym9yZGVyLWJvdHRvbTo1cHggIzMyMzIzMyBzb2xpZDtcblx0YmFja2dyb3VuZDojZmZmO1xuXHR0ZXh0LWFsaWduOmNlbnRlcjtcblx0Ym9yZGVyLXJhZGl1czoxMHB4O1xuXHRvdmVyZmxvdzpoaWRkZW47XG5cdHBvc2l0aW9uOnJlbGF0aXZlO1xuXHR0cmFuc2l0aW9uOjAuNXM7XG5cdG1hcmdpbi1ib3R0b206MjhweDtcbn1cblxuXG4ub3VyLXRlYW0tbWFpbiBpbWdcbntcblx0Ym9yZGVyLXJhZGl1czo1MCU7XG5cdG1hcmdpbi1ib3R0b206MjBweDtcblx0d2lkdGg6IDkwcHg7XG59XG5cbi5vdXItdGVhbS1tYWluIGgzXG57XG5cdGZvbnQtc2l6ZToyMHB4O1xuXHRmb250LXdlaWdodDo3MDA7XG59XG5cbi5vdXItdGVhbS1tYWluIHBcbntcblx0bWFyZ2luLWJvdHRvbTowO1xufVxuXG4udGVhbS1iYWNrXG57XG5cdHdpZHRoOjEwMCU7XG5cdGhlaWdodDphdXRvO1xuXHRwb3NpdGlvbjphYnNvbHV0ZTtcblx0dG9wOjA7XG5cdGxlZnQ6MDtcblx0cGFkZGluZzo1cHggMTVweCAwIDE1cHg7XG5cdHRleHQtYWxpZ246bGVmdDtcblx0YmFja2dyb3VuZDojZmZmO1xuXHRcbn1cblxuLnRlYW0tZnJvbnRcbntcblx0d2lkdGg6MTAwJTtcblx0aGVpZ2h0OmF1dG87XG5cdHBvc2l0aW9uOnJlbGF0aXZlO1xuXHR6LWluZGV4OjEwO1xuXHRiYWNrZ3JvdW5kOiNmZmY7XG5cdHBhZGRpbmc6MTVweDtcblx0Ym90dG9tOjBweDtcblx0dHJhbnNpdGlvbjogYWxsIDAuNXMgZWFzZTtcbn1cblxuLm91ci10ZWFtLW1haW46aG92ZXIgLnRlYW0tZnJvbnRcbntcblx0Ym90dG9tOi0yMDBweDtcblx0dHJhbnNpdGlvbjogYWxsIDAuNXMgZWFzZTtcbn1cblxuLm91ci10ZWFtLW1haW46aG92ZXJcbntcblx0Ym9yZGVyLWNvbG9yOiM3Nzc7XG5cdHRyYW5zaXRpb246MC41cztcbn1cblxuLypvdXItdGVhbS1tYWluKi9cblxuIl19 */</style></head>
+<body>
+  <app-root _nghost-ngc-c0="" ng-version="8.0.2"><head _ngcontent-ngc-c0=""><link _ngcontent-ngc-c0="" crossorigin="anonymous" href="./CoWorkingApp_files/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" rel="stylesheet"><link _ngcontent-ngc-c0="" href="./CoWorkingApp_files/bootstrap.min(1).css" id="bootstrap-css" rel="stylesheet">
+"scripts": [ "../node_modules/jquery/dist/jquery.min.js", "../node_modules/bootstrap/dist/js/bootstrap.js"] </head><app-navbar _ngcontent-ngc-c0="" _nghost-ngc-c1=""><nav _ngcontent-ngc-c1="" class="navbar navbar-expand-lg fixed-top navbar-fix navbar-dark bg-dark shadow p-3 mb-5"><a _ngcontent-ngc-c1="" class="navbar-brand" href="http://localhost:4200/#"><img _ngcontent-ngc-c1="" alt="logo" src="./CoWorkingApp_files/Logo.png"></a><button _ngcontent-ngc-c1="" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarNav" data-toggle="collapse" type="button"><span _ngcontent-ngc-c1="" class="navbar-toggler-icon"></span></button><div _ngcontent-ngc-c1="" class="collapse navbar-collapse" id="navbarNav"><ul _ngcontent-ngc-c1="" class="navbar-nav navbar-nav ml-auto"><li _ngcontent-ngc-c1="" class="nav-item active"><a _ngcontent-ngc-c1="" class="nav-link" href="http://localhost:4200/#">About </a></li><li _ngcontent-ngc-c1="" class="nav-item active"><a _ngcontent-ngc-c1="" class="nav-link" href="http://localhost:4200/#">Plans</a></li><li _ngcontent-ngc-c1="" class="nav-item active"><a _ngcontent-ngc-c1="" class="nav-link" href="http://localhost:4200/#">Location</a></li></ul><div _ngcontent-ngc-c1="" class="login"><button _ngcontent-ngc-c1="" class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button></div></div></nav><header _ngcontent-ngc-c1="" class="masthead"><div _ngcontent-ngc-c1="" class="container h-100"><div _ngcontent-ngc-c1="" class="row h-100 align-items-center"><div _ngcontent-ngc-c1="" class="col-12 text-center"></div></div></div></header><div _ngcontent-ngc-c1="" class="container"><div _ngcontent-ngc-c1="" class="row"><div _ngcontent-ngc-c1="" class="col"><h2 _ngcontent-ngc-c1="">Why Us?</h2><div _ngcontent-ngc-c1="" class="details"><p _ngcontent-ngc-c1="">Coworking offers beautifully crafted workspaces where people can create, connect, and grow their businesses at prime locations in multiple cities pan-India. Innov8 hosts people from diverse backgrounds such as digital nomads, entrepreneurs, freelancers, corporates employees and startup enthusiasts.</p></div></div><div _ngcontent-ngc-c1="" class="col"><img _ngcontent-ngc-c1="" alt="" class="float-right" height="250px" src="./CoWorkingApp_files/pexels-photo-886465.jpeg"></div></div></div><hr _ngcontent-ngc-c1=""><div _ngcontent-ngc-c1="" class="container"><div _ngcontent-ngc-c1="" class="row"><div _ngcontent-ngc-c1="" class="col"><img _ngcontent-ngc-c1="" alt="" class="float-left" height="250px" src="./CoWorkingApp_files/pexels-photo-1246953.jpeg"></div><div _ngcontent-ngc-c1="" class="col"><h2 _ngcontent-ngc-c1="">COWORKING COMMUNITY</h2><div _ngcontent-ngc-c1="" class="details"><p _ngcontent-ngc-c1="">You become par t of a wholesome experience that helps you build networks. With a shared work environment such as Innov8’s, you can create new ventures, brands or bands. From conferences, startup talk, musical nights and entrepreneurial sessions, We have it all!</p></div></div></div></div><hr _ngcontent-ngc-c1=""><h1 _ngcontent-ngc-c1="" class="text-center">Meet Our Crew</h1><div _ngcontent-ngc-c1="" class="container"><div _ngcontent-ngc-c1="" class="row"><div _ngcontent-ngc-c1="" class="col-lg-4"><div _ngcontent-ngc-c1="" class="our-team-main"><div _ngcontent-ngc-c1="" class="team-front"><img _ngcontent-ngc-c1="" class="img-fluid" src="./CoWorkingApp_files/RK.jpg"><h3 _ngcontent-ngc-c1="">Rutuja Kulkarni</h3><p _ngcontent-ngc-c1="">Web Designer</p></div><div _ngcontent-ngc-c1="" class="team-back"><span _ngcontent-ngc-c1="" style="font-size: 20px"> Works in IBM as an Associate Software Engineer. For now getting training through the institute name as StackRoute. Currently Working on Project "Co-working" </span></div></div></div><div _ngcontent-ngc-c1="" class="col-lg-4"><div _ngcontent-ngc-c1="" class="our-team-main"><div _ngcontent-ngc-c1="" class="team-front"><img _ngcontent-ngc-c1="" class="img-fluid" src="./CoWorkingApp_files/TS.jpg"><h3 _ngcontent-ngc-c1="">Tejaswini Shet </h3><p _ngcontent-ngc-c1="">Web Designer</p></div><div _ngcontent-ngc-c1="" class="team-back"><span _ngcontent-ngc-c1="" style="font-size: 20px"> Works in IBM as an Associate Software Engineer. For now getting training through the institute name as StackRoute. Currently Working on Project "Co-working" </span></div></div></div><div _ngcontent-ngc-c1="" class="col-lg-4"><div _ngcontent-ngc-c1="" class="our-team-main"><div _ngcontent-ngc-c1="" class="team-front"><img _ngcontent-ngc-c1="" class="img-fluid" src="./CoWorkingApp_files/SG.jpg"><h3 _ngcontent-ngc-c1="">Shona George</h3><p _ngcontent-ngc-c1="">Web Designer</p></div><div _ngcontent-ngc-c1="" class="team-back"><span _ngcontent-ngc-c1="" style="font-size: 20px"> Works in IBM as an Associate Software Engineer. For now getting training through the institute name as StackRoute. Currently Working on Project "Co-working" </span></div></div></div><div _ngcontent-ngc-c1="" class="col-lg-4"><div _ngcontent-ngc-c1="" class="our-team-main"><div _ngcontent-ngc-c1="" class="team-front"><img _ngcontent-ngc-c1="" class="img-fluid" src="./CoWorkingApp_files/SK.jpg"><h3 _ngcontent-ngc-c1="">Sravani Krishnam</h3><p _ngcontent-ngc-c1="">Web Designer</p></div><div _ngcontent-ngc-c1="" class="team-back"><span _ngcontent-ngc-c1="" style="font-size: 20px"> Works in IBM as an Associate Software Engineer. For now getting training through the institute name as StackRoute. Currently Working on Project "Co-working" </span></div></div></div><div _ngcontent-ngc-c1="" class="col-lg-4"><div _ngcontent-ngc-c1="" class="our-team-main"><div _ngcontent-ngc-c1="" class="team-front"><img _ngcontent-ngc-c1="" class="img-fluid" src="./CoWorkingApp_files/PA.jpg"><h3 _ngcontent-ngc-c1="">Pranjal Arote</h3><p _ngcontent-ngc-c1="">Web Designer</p></div><div _ngcontent-ngc-c1="" class="team-back"><span _ngcontent-ngc-c1="" style="font-size: 20px"> Works in IBM as an Associate Software Engineer. For now getting training through the institute name as StackRoute. Currently Working on Project "Co-working" </span></div></div></div><div _ngcontent-ngc-c1="" class="col-lg-4"><div _ngcontent-ngc-c1="" class="our-team-main"><div _ngcontent-ngc-c1="" class="team-front"><img _ngcontent-ngc-c1="" class="img-fluid" src="./CoWorkingApp_files/ZS.jpg"><h3 _ngcontent-ngc-c1="">Zeba sheikh</h3><p _ngcontent-ngc-c1="">Web Designer</p></div><div _ngcontent-ngc-c1="" class="team-back"><span _ngcontent-ngc-c1="" style="font-size: 20px"> Works in IBM as an Associate Software Engineer. For now getting training through the institute name as StackRoute. Currently Working on Project "Co-working" </span></div></div></div></div></div><footer _ngcontent-ngc-c1="" class="page-footer font-small stylish-color-dark pt-4" style="background-color: rgb(233, 230, 230)"><div _ngcontent-ngc-c1="" class="container text-center text-md-left"><div _ngcontent-ngc-c1="" class="row"><div _ngcontent-ngc-c1="" class="col-md-4 mx-auto"><h5 _ngcontent-ngc-c1="" class="font-weight-bold text-uppercase mt-3 mb-4">Our Address</h5><p _ngcontent-ngc-c1="">Co-working, 69, Regal Building, Connaught Place, New Delhi - 110001</p></div><hr _ngcontent-ngc-c1="" class="clearfix w-100 d-md-none"><div _ngcontent-ngc-c1="" class="col-md-3 mx-auto"><h5 _ngcontent-ngc-c1="" class="font-weight-bold text-uppercase mt-3 mb-4">Quick Links</h5><ul _ngcontent-ngc-c1="" class="list-unstyled"><li _ngcontent-ngc-c1=""><a _ngcontent-ngc-c1="" href="http://localhost:4200/#!">Location</a></li><li _ngcontent-ngc-c1=""><a _ngcontent-ngc-c1="" href="http://localhost:4200/#!">Why Us?</a></li></ul></div><hr _ngcontent-ngc-c1="" class="clearfix w-100 d-md-none"><div _ngcontent-ngc-c1="" class="col-md-4 mx-auto"><h5 _ngcontent-ngc-c1="" class="font-weight-bold text-uppercase mt-3 mb-4">Contact Us</h5><ul _ngcontent-ngc-c1="" class="list-unstyled"><li _ngcontent-ngc-c1=""><i _ngcontent-ngc-c1="" aria-hidden="true" class="fa fa-phone"></i><a _ngcontent-ngc-c1="" href="http://localhost:4200/#"> +91 9877234231</a></li><li _ngcontent-ngc-c1=""><i _ngcontent-ngc-c1="" area-hidden="true" class="fas fa-envelope "></i><a _ngcontent-ngc-c1="" href="http://localhost:4200/#"> www.coworking.com</a></li></ul></div></div></div><hr _ngcontent-ngc-c1=""><ul _ngcontent-ngc-c1="" class="list-unstyled list-inline text-center"><li _ngcontent-ngc-c1="" class="list-inline-item"><a _ngcontent-ngc-c1="" class="btn-floating btn-fb mx-1" href="http://localhost:4200/#"><i _ngcontent-ngc-c1="" class="fab fa-facebook-f"></i></a></li><li _ngcontent-ngc-c1="" class="list-inline-item"><a _ngcontent-ngc-c1="" class="btn-floating btn-tw mx-1" href="http://localhost:4200/#"><i _ngcontent-ngc-c1="" class="fab fa-twitter"></i></a></li><li _ngcontent-ngc-c1="" class="list-inline-item"><a _ngcontent-ngc-c1="" class="btn-floating btn-gplus mx-1" href="http://localhost:4200/#"><i _ngcontent-ngc-c1="" class="fab fa-google-plus-g"></i></a></li><li _ngcontent-ngc-c1="" class="list-inline-item"><a _ngcontent-ngc-c1="" class="btn-floating btn-li mx-1" href="http://localhost:4200/#"><i _ngcontent-ngc-c1="" class="fab fa-linkedin-in"></i></a></li><li _ngcontent-ngc-c1="" class="list-inline-item"><a _ngcontent-ngc-c1="" class="btn-floating btn-dribbble mx-1" href="http://localhost:4200/#"><i _ngcontent-ngc-c1="" class="fab fa-dribbble"></i></a></li></ul><div _ngcontent-ngc-c1="" class="footer-copyright text-center py-3">© 2019 Copyright: <a _ngcontent-ngc-c1="" href="https://mdbootstrap.com/education/bootstrap/">Coworking.com</a></div></footer></app-navbar><router-outlet _ngcontent-ngc-c0=""></router-outlet></app-root>
+  <script src="./CoWorkingApp_files/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="./CoWorkingApp_files/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="./CoWorkingApp_files/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+<script src="./CoWorkingApp_files/runtime.js"></script><script src="./CoWorkingApp_files/polyfills.js"></script><script src="./CoWorkingApp_files/styles.js"></script><script src="./CoWorkingApp_files/vendor.js"></script><script src="./CoWorkingApp_files/main.js"></script>
+
+</body></html>

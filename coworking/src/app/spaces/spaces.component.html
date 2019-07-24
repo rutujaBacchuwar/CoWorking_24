@@ -1,0 +1,41 @@
+<app-navbar> </app-navbar>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+  integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
+
+<body>
+
+    <div class="container" style="margin-top: 100px">
+        <div class="row" style="font-family: sans-serif">
+
+            <div class="col-xl-12 col-l-8 col-sm-6 col-xs-2" id="heading">
+                <h2 style="font-family: sans-serif" style="text-align:left" style="padding-bottom: 80px">
+                </h2>
+            </div>
+
+            <div class="row">
+                <div class="card" *ngFor="let data of arrayOfSpace">
+                   
+                    <img class="card-img-top" src="{{data.spaceImageUrl}}" alt="Card image">
+                    <h5 class="card-title"><b>&nbsp;Space Name</b>:{{data.spaceName}}</h5>
+                    <h5 class="card-title"><b>&nbsp;Location</b>:{{loc}}</h5>
+                    <div class="button">
+                      <button type="button" class="btn btn-sm btn-info" (click)="click(data.spaceName)">View</button>
+                    </div> 
+                  </div>
+            </div>
+
+        </div>
+    </div>
+
+    
+  </body>
+
+<app-footer></app-footer>
+

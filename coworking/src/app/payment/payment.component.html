@@ -1,0 +1,169 @@
+<!-- <div class="modal fade" id="myModal2"> -->
+<app-navbar-logout></app-navbar-logout>
+
+<body>
+    <form>
+        <div class="container-fluid py-3">
+            <div class="row">
+                <div class="col-12 col-sm-8 col-md-6 col-lg-4 mx-auto">
+                    <div id="pay-invoice" class="card">
+                        <div class="card-body">
+                            <!-- <button type="button " class="close" data-dismiss="myModal2">&times;</button> -->
+                            <!-- <button id="closemodal" class="btn btn-primary close" data-dismiss="modal" target="_blank">&times;</button> -->
+
+                            <div class="card-title">
+                                <h3 class="text-center">Pay Invoice</h3>
+
+                            </div>
+                            <!-- <hr> -->
+                            <form action="/echo" method="post" class="needs-validation">
+
+                                <div class="form-group has-success">
+                                    <label for="name" class="control-label mb-1">Name on card </label>
+
+                                    <input id="name" name="name" type="text" class="form-control cc-name" required
+                                        minlength="5" maxlength="30" [(ngModel)]="cc-nameText" #name="ngModel">
+                                    <div *ngIf="name.errors && (name.dirty || name.touched)" class="alert alert-danger">
+                                        <div [hidden]="!name.errors.required">
+                                            Card name is required!
+                                        </div>
+                                        <div [hidden]="!name.errors.minlength">
+                                            Card Name must be atlest 5 characters long.
+                                        </div>
+                                        <div [hidden]="!name.errors.maxlength">
+                                            Card Name cannot be more than 30 characters long.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="number" class="control-label mb-1">Card number &nbsp; &nbsp; &nbsp;
+                                        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img
+                                            src="http://i76.imgup.net/accepted_c22e0.png"></label>
+
+                                    <input id="number" name="number" type="number"
+                                        class="form-control cc-number identified visa" required maxlength="16"
+                                        [(ngModel)]="numberNumber" #number="ngModel">
+                                    <div *ngIf="number.errors && (number.dirty || number.touched)"
+                                        class="alert alert-danger">
+                                        <div [hidden]="!number.errors.required">
+                                            Card Number is required!
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="form-group">
+                                            <label for="cc-exp" class="control-label mb-1">ExpMonth</label>
+
+
+                                            <select class="form-control cc-exp" #expmonth>
+                                                <option selected>MM</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                            </select>
+
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="form-group">
+                                            <label for="cc-exp" class="control-label mb-1">ExpYear</label>
+                                            <select class="form-control cc-exp" required #expyear>
+                                                <option selected>YYYY</option>
+                                                <option value="2019">2019</option>
+                                                <option value="2020">2020</option>
+                                                <option value="2021">2021</option>
+                                                <option value="2022">2022</option>
+                                                <option value="2023">2023</option>
+                                                <option value="2024">2024</option>
+                                                <option value="2025">2025</option>
+                                                <option value="2026">2026</option>
+                                                <option value="2027">2027</option>
+                                                <option value="2028">2028</option>
+                                                <option value="2029">2029</option>
+                                                <option value="2030">2030</option>
+                                            </select>
+
+
+
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-4">
+                                        <label for="x_card_code" class="control-label mb-1">CVV</label>
+                                        <div class="input-group">
+                                            <input id="x_card_code" name="x_card_code" type="number"
+                                                class="form-control cc-cvc" maxlength="3" required #cvc>
+                                            <div *ngIf="number.errors && (number.dirty || number.touched)"
+                                                class="alert alert-danger">
+                                                <div [hidden]="!number.errors.required">
+                                                    CVV is required!
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div>
+                                    <button id="payment-button" type="submit" class="btn btn-lg btn-info btn-block"
+                                        data-toggle="modal" data-target="#myModal"
+                                        (click)="payment(name.value,number.value,expmonth.value,expyear.value,cvc.value)">
+                                        <i class="fa fa-lock fa-lg"></i>&nbsp;
+                                        <span id="payment-button-amount">Pay</span>
+
+                                    </button>
+                                    <br>
+                                    <button id="payment-button" type="submit" class="btn btn-info" style="margin-left: 40%" (click)="backToHome()">Home</button>
+
+                                </div>
+                            </form>
+
+                        </div>
+
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </form>
+   
+</body>
+<!-- </div> -->
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+
+            <div class="modal-header">
+                <h4 class="modal-title"></h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <div class="modal-body">
+                <h4>Payment Successful</h4>
+            </div>
+
+            <div class="modal-footer">
+
+            </div>
+
+        </div>
+  
+    </div>
+
+</div>
+

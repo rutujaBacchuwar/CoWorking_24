@@ -1,0 +1,82 @@
+.icon {
+    padding: 10px;
+    background:#123f84;
+    color: white;
+    min-width: 30px;
+    text-align: center;
+
+  }
+  
+  .input-field {
+    width: 380px;
+    padding: 10px;
+    outline: none; 
+   }
+
+
+  .well {
+    min-height: 0em;
+        padding: 19px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    border: 1px solid #e3e3e3;
+    border-radius:17px;
+    box-shadow: 1px 0px 10px black;
+    align-content: center;
+ 
+  }
+  .btn-primary {
+    color: #fff;
+    background-color:#123f84;
+    border-color: #b58964;
+    margin-left: 40%;
+    border-radius: 25px;
+    border-radius: 25px;
+   
+ }
+
+    body {
+     background-image: url("https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");   
+    
+    background-color: white;
+     height: 797px;
+    opacity: 0.9;
+    background-size: cover; 
+    width:100%;
+   
+   
+} 
+   
+
+
+
+
+
+ /* body img{
+    background-image: url("https://images.pexels.com/photos/34571/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500"); 
+    background-color: white;
+    height: 800px ;
+    opacity: 0.8;
+    background-size: cover; 
+    width:100%;
+   
+}  */
+
+@media (max-width: 800px) {
+    .form-inline input {
+      margin: 10px 0;
+
+      width:100%;
+    }
+} 
+
+.form-group i{
+    height: 30px;
+    width: 10px;
+    text-align: center;
+}
+
+
+.container h2{
+  padding-top:40px;
+}

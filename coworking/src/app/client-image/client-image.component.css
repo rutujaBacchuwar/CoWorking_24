@@ -1,0 +1,20 @@
+.masthead {
+    height: 100vh;
+    min-height: 500px;
+    /* background-image: url("https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE28gcp?ver=be70&q=90&m=2&h=768&w=1024&b=%23FFFFFFFF&aim=true"); */
+    background-image: url("image/landing_page.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}  
+.text{
+    color: beige;
+    /* font-size: 40px; */
+}
+.image{
+    width: 250px;
+    border-radius: 50%;
+}
+img.rounded-corners{
+    border-radius:30px;
+}

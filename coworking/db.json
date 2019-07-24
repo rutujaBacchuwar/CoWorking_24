@@ -1,0 +1,271 @@
+{
+    "category1": [{
+        "CategoryName": "Hot Desk"
+    }],
+    "category2": [{
+        "CategoryName": "Dedicated Desk"
+    }],
+    "category3": [{
+        "CategoryName": "Training Room"
+    }],
+
+    "hotdesk": [{
+            "SpaceId": 1001,
+            "SpaceName": "Innov8",
+            "location": "Kormangala"
+        },
+        {
+            "SpaceId": 1004,
+            "SpaceName": "91Spring",
+            "location": "Madiwala"
+        },
+        {
+            "SpaceId": 2901,
+            "SpaceName": "Sneed",
+            "location": "Whitefield"
+        }
+    ],
+    "dedicateddesk": [{
+            "SpaceId": 1001,
+            "SpaceName": "Innov8",
+            "location": "Kormangala"
+        },
+        {
+            "SpaceId": 1001,
+            "SpaceName": "Innov8",
+            "location": "Kormangala"
+        },
+        {
+            "SpaceId": 1001,
+            "SpaceName": "Innov8",
+            "location": "Kormangala"
+        }
+    ],
+    "meetingroom": [{
+            "SpaceId": 1001,
+            "SpaceName": "Innov8",
+            "location": "Kormangala"
+        },
+        {
+            "SpaceId": 1001,
+            "SpaceName": "Innov8",
+            "location": "Kormangala"
+        },
+        {
+            "SpaceId": 1001,
+            "SpaceName": "Innov8",
+            "location": "Kormangala"
+        }
+    ],
+    "eventspace": [{
+        "SpaceId": 1001,
+        "SpaceName": "Innov8",
+        "location": "Kormangala"
+    }],
+    "trainingroom": [{
+            "SpaceId": 1001,
+            "SpaceName": "Innov8",
+            "location": "Kormangala"
+        },
+        {
+            "SpaceId": 1004,
+            "SpaceName": "91Spring",
+            "location": "Madiwala"
+        },
+        {
+            "SpaceId": 2901,
+            "SpaceName": "Sneed",
+            "location": "Whitefield"
+        },
+        {
+            "SpaceId": 101,
+            "SpaceName": "Innov8",
+            "location": "Kormangala"
+        }
+    ],
+    "Client-Details": [{
+        "name": "Rutuja Kulkarni",
+        "contact": 1234567890,
+        "email": "rutu14.k@gmail.com"
+    }],
+    "details": [{
+            "spacename": "stackroute",
+            "category": "Training Room",
+            "location": "Koramangala,Banglore",
+            "price": 2000,
+            "from": "01-06-2011",
+            "to": "22-11-2015"
+        },
+        {
+            "spacename": "Stackroute",
+            "category": "Training Room",
+            "location": "Jayanagar,Hyderabad",
+            "price": 2000,
+            "from": "01-06-2011",
+            "to": "22-11-2015"
+        },
+        {
+            "spacename": "stackroute",
+            "category": "Hot desk",
+            "location": "Koramangala,Banglore",
+            "price": 2000,
+            "from": "01-06-2011",
+            "to": "22-11-2015"
+        },
+        {
+            "spacename": "Stackroute",
+            "category": "Meeting Room",
+            "location": "Jayanagar,Banglore",
+            "price": 2000,
+            "from": "01-06-2011",
+            "to": "22-11-2015"
+        },
+        {
+            "clientname": "Rutuja Kulkarni,"
+        }
+    ],
+    "Owner-Details": [{
+        "name": "Tejaswini",
+        "contact": 9876543210,
+        "email": "tejaswinishet2@gmail.com"
+    }],
+    "Space-Details": [{
+            "spacename": "NIIT",
+            "location": "Koramangala,Bangalore"
+        },
+        {
+            "spacename": "StackRoute",
+            "location": "RajajiNagar,Bangalore"
+        }
+    ],
+    "Client-space-details": [{
+            "category": "Hot desk",
+            "spacename": "NIIT",
+            "location": "Kormangala,Bangalore"
+        },
+        {
+            "category": "Hot desk",
+            "spacename": "NIIT",
+            "location": "Kormangala,Bangalore"
+        },
+        {
+            "category": "Hot desk",
+            "spacename": "NIIT",
+            "location": "Kormangala,Bangalore"
+        },
+        {
+            "category": "Hot desk",
+            "spacename": "NIIT",
+            "location": "Kormangala,Bangalore"
+        }
+    ],
+    "client-recommendation-details": [{
+            "spacename": "stackroute",
+            "category": "Training Room",
+            "location": "Koramangala,Banglore"
+        },
+        {
+            "spacename": "Stackroute",
+            "category": "Training Room",
+            "location": "Jayanagar,Hyderabad"
+        },
+        {
+            "spacename": "stackroute",
+            "category": "Training Room",
+            "location": "Koramangala,Banglore"
+        },
+        {
+            "spacename": "Stackroute",
+            "category": "Hot Desk",
+            "location": "Jayanagar,Banglore"
+        },
+        {
+            "spacename": "Stackroute",
+            "category": "Event Space",
+            "location": "Majestic,Banglore"
+        },
+        {
+            "spacename": "Stackroute",
+            "category": "Private Cabin",
+            "location": "Nagasandra,Banglore"
+        }
+    ],
+    "clientname": [{
+        "name": "Rutuja"
+    }],
+    "space": [{
+            "spacetype": "Open Desk",
+            "capacity": "12 Seater",
+            "hourlyRate": "₹100/hour",
+            "dailyRate": "₹1500/day",
+            "monthlyRate": "₹5000/month"
+        },
+        {
+            "capacity": "12 Seater",
+            "hourlyRate": "₹300/hour",
+            "dailyRate": "₹1600/day",
+            "monthlyRate": "₹7000/month"
+        },
+        {
+            "spacetype": "Private Room",
+            "capacity": "1 Seater",
+            "hourlyRate": "₹150/hour",
+            "dailyRate": "₹1350/day",
+            "monthlyRate": "₹6000/month"
+        },
+        {
+            "capacity": "2 Seater",
+            "hourlyRate": "₹200/hour",
+            "dailyRate": "₹1800/day",
+            "monthlyRate": "₹8000/month"
+        },
+        {
+            "capacity": "3 Seater",
+            "hourlyRate": "₹600/hour",
+            "dailyRate": "₹1800/day",
+            "monthlyRate": "₹24000/month"
+        },
+        {
+            "capacity": "4 Seater",
+            "hourlyRate": "₹700/hour",
+            "dailyRate": "₹2000/day",
+            "monthlyRate": "₹32000/month"
+        },
+        {
+            "capacity": "5 Seater",
+            "hourlyRate": "₹900/hour",
+            "dailyRate": "₹2800/day",
+            "monthlyRate": "₹40000/month"
+        },
+        {
+            "spacetype": "Meeting Room",
+            "capacity": "5 Seater",
+            "hourlyRate": "₹650/hour",
+            "dailyRate": "₹1550/day",
+            "monthlyRate": "--"
+        },
+        {
+            "capacity": "10 Seater",
+            "hourlyRate": "₹800/hour",
+            "dailyRate": "₹4000/day",
+            "monthlyRate": "--"
+        },
+        {
+            "capacity": "25 Seater",
+            "hourlyRate": "₹1600/hour",
+            "dailyRate": "₹8000/day",
+            "monthlyRate": "--"
+        },
+        {
+            "spacetype": "Training Room",
+            "capacity": "30 Seater",
+            "hourlyRate": "₹1500/hour",
+            "dailyRate": "₹15550/day",
+            "monthlyRate": "--"
+        },
+        {
+            "spacename": "Salapuria",
+            "location": "Banglore"
+        }
+    ]
+}

@@ -1,0 +1,176 @@
+version: "3.3"
+services:
+
+  apigateway:
+    image: zuul-service
+    build: zuul-gatewayservice/
+    restart: always
+    network_mode: host
+    depends_on:
+    - eurekaserver
+    ports:
+    - 8092:8092
+    expose:
+    - 8092
+
+  eurekaserver:
+    image: eureka-service:latest
+    build: eureka-server/
+    restart: always
+    network_mode: host
+    ports:
+    - 8001:8001
+    expose:
+    - 8001
+
+  configserver:
+      image: config-server:latest
+      build: config-server/
+      restart: always
+      network_mode: host
+      ports:
+      - 8000:8000
+      expose:
+      - 8000
+
+  mongo:
+    image: mongo:3.4-jessie
+    ports:
+      - 27017:27017
+    expose:
+      - 27017
+    container_name: mongo
+    network_mode: host
+
+
+  zookeeper:
+    container_name: zookeeper
+    image: wurstmeister/zookeeper:latest
+     # restart: always
+    ports:
+      - 2181:2181
+    expose:
+      - 2181
+    network_mode: "host"
+    hostname: localhost
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000000000
+
+  kafka:
+       container_name: kafka
+       image: wurstmeister/kafka:latest
+     # restart: always
+       ports:
+         - 9092:9092
+       expose:
+         - 9092
+       depends_on:
+         - zookeeper
+       network_mode: "host"
+       hostname: localhost
+       environment:
+         KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
+         KAFKA_ADVERTISED_HOST_NAME: localhost
+         KAFKA_ZOOKEEPER_CONNECT: localhost:2181
+         KAFKA_MESSAGE_MAX_BYTES: 1000000000
+
+  mysql:
+      image: mysql:5.7
+      ports:
+        - 3306:3306
+      environment:
+        - MYSQL_ROOT_PASSWORD=Root@123
+        - MYSQL_DATABASE=user
+      container_name: mysql
+      network_mode: host
+      hostname: localhost
+
+
+
+  user-service:
+     image: user-service
+     build: user-service/
+     #restart: always
+     network_mode: host
+     depends_on:
+        - mongo
+        - eurekaserver
+        - configserver
+        - apigateway
+
+
+
+  login-service:
+     image: login-service
+     build: login-service
+     #restart: always
+     network_mode: host
+     depends_on:
+        - mysql
+     ports:
+          - 8002:8002
+     expose:
+          - 8002
+
+  workspace-service:
+     image: workspace-service
+     build: workspace-service
+     #restart: always
+     network_mode: host
+     depends_on:
+        - mongo
+        - eurekaserver
+
+  booking-service:
+     image: booking-service
+     build: booking-service
+     #restart: always
+     network_mode: host
+     depends_on:
+        - mongo
+        - eurekaserver
+
+
+
+  neo4j:
+    image: neo4j:3.0
+    ports:
+      - 7474:7474
+      - 7687:7687
+    expose:
+      - 7474
+    container_name: neo4j_docker
+    network_mode: host
+    hostname: localhost
+    volumes:
+      - ./neo4j/data:/data
+      - ./neo4j/import:/import
+    environment:
+      - NEO4J_AUTH=neo4j/root123
+    restart: always
+
+
+
+  recommendation:
+    image: recommendation
+    build: recommendation
+    #restart: always
+    network_mode: host
+    depends_on:
+       - neo4j
+       - eurekaserver
+
+  coworking:
+    build:
+      context: ./coworking
+      args:
+        NG_CLI_ANYALYTICS: ci
+    network_mode: "host"
+    hostname: localhost
+    ports:
+      - 8081:8081
+    restart: always
+    environment:
+        NG_CLI_ANYALYTICS: ci
+

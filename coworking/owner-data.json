@@ -1,0 +1,9 @@
+{
+    "Owner-Details": [
+        { "name": "Tejaswini", "contact": 9876543210, "email": "tejaswinishet2@gmail.com" }
+    ],
+    "Space-Details": [
+        { "spacename": "NIIT", "location": "Koramangala,Bangalore" },
+        { "spacename": "StackRoute", "location": "RajajiNagar,Bangalore" }
+    ]
+}

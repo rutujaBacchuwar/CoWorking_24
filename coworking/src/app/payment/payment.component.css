@@ -1,0 +1,39 @@
+
+
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: .25rem;
+    margin-top: 33%;
+    margin-bottom: 33%;
+}
+
+body {
+    background-image: url("https://innov8.work/static/index-new/images/banner_new.jpg");
+    background-size: 3000px 2000px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+}
+
+.modal-body {
+    margin-left: 20%;
+}
+
+invalid-feedback {
+    display: none;
+    width: 100%;
+    margin-top: .25rem;
+    font-size: 80%;
+    color: #dc3545;
+}

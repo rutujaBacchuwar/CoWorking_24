@@ -1,0 +1,145 @@
+
+
+<app-navbar> </app-navbar>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12 col-sm-6 col-xs-2">
+                <h2 style="font-family: sans-serif" style="text-align: center">
+                    <strong>Plans & Pricing</strong>
+                </h2>
+            </div>
+            <div class="col-sm-12">
+            </div>
+        </div>
+        <div clas="grid-wrapper">
+            <div class="row">
+                <div class="col-sm-4 col-xs-6">
+                    <div class="grid-wrap">
+                        <a href=""><img class="card-img-top" src="../../assets/images/hotdesk.jpg" alt="" width="350" height="300"></a>
+                        <div class="card-img-overlay">
+                            <button class="clickbutton" value="Hot Desk" #text (click)="click(text.value)">
+                                <h4>
+                                    <strong>
+                                        Hot Desk
+                                    </strong>
+                                </h4>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                    <div class="grid-wrap">
+                        <a href=""><img class="card-img-top" src="../../assets/images/DedicatedDesk.jpg" alt="" width="350" height="300"></a>
+                        <div class="card-img-overlay">
+                            <button class="clickbutton" value="Dedicated Desk" #text1 (click)="click(text1.value)">
+                                <h4>
+                                    <strong>
+                                        Dedicated Desk
+                                    </strong>
+                                </h4>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-6" onclick="">
+                    <div class="grid-wrap">
+                        <a href=""><img class="card-img-top" src="../../assets/images/trainroom.jpeg" alt="" width="350" height="300"></a>
+                        <div class="card-img-overlay">
+                            <button class="clickbutton" value="Training Rooms" #text2 (click)="click(text2.value)">
+                                <h4>
+                                    <strong>
+                                        Training Room
+                                    </strong>
+                                </h4>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-6" onclick="">
+                    <div class="grid-wrap">
+                        <a href=""><img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkPDA3KlJ55RpKGX-8gYX7nlCrM8XhwewupLhg72t7zzb8eYFX" alt="" width="350" height="300"></a>
+                        <div class="card-img-overlay">
+                            <button class="clickbutton" value="Private cabin" #text3 (click)="click(text3.value)">
+                                <h4>
+                                    <strong>
+                                        Private Cabin
+                                    </strong>
+                                </h4>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-6" onclick="">
+                    <div class="grid-wrap">
+                        <a href=""><img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrgrccCjBTskWyGWrPUZpB4HGBXjTcFQ3kEk2haw7HHOaLXelC" alt="Meeting Room Image" width="350" height="300"></a>
+                        <div class="card-img-overlay">
+                            <button class="clickbutton" value="Meeting Rooms" #text4 (click)="click(text4.value)">
+                                <h4>
+                                    <strong>
+                                        Meeting Room
+                                    </strong>
+                                </h4>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                    <div class="grid-wrap">
+                        <a href=""><img class="card-img-top" src="../../assets/images/event.jpeg" alt="" width="350" height="300"></a>
+                        <div class="card-img-overlay">
+                            <button class="clickbutton" value="Event Space" #text5 (click)="click(text5.value)">
+                                <h4>
+                                    <strong>
+                                        Event Space
+                                    </strong>
+                                </h4>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="basic-amenities-wrap">
+                <div id="basic">
+                    <h2 style="font-family: sans-serif" style="color: black">Basic Amenities</h2>
+                </div>
+                <div class="basic-wrap">
+                    <div class="row">
+                        <div class="col-6 col-md-4 col-sm-12">
+                            <img src="assets/icons/wi-fi.png" alt="Wi-fi logo" width="90px" height="100px">
+                            <p>Wi-Fi</p>
+                        </div>
+                        <div class="col-6 col-md-4 col-sm-12">
+                            <img src="assets/icons/housekeeping.png" alt="House-keeping logo" width="90px" height="100px">
+                            <p>House-Keeping</p>
+                        </div>
+                        <div class="col-6 col-md-4 col-sm-12">
+                            <img src="assets/icons/access.png" alt="24*7 access" width="90px" height="100px">
+                            <p>24*7 Access</p>
+                        </div>
+                        <div class="col-6 col-md-4 col-sm-12">
+                            <img src="assets/icons/washroom.png" alt="rest-room logo" width="90px" height="100px">
+                            <p>Rest Rooms</p>
+                        </div>
+                        <div class="col-6 col-md-4 col-sm-12">
+                            <img src="assets/icons/filter.png" alt="drinking water logo" width="90px" height="100px">
+                            <p>Drinking Water</p>
+                        </div>
+                        <div class="col-6 col-md-4 col-sm-12">
+                            <img src="assets/icons/backup.png" alt="power backup logo" width="90px" height="100px">
+                            <p>Power-Backup</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+</section>
+<app-footer></app-footer>

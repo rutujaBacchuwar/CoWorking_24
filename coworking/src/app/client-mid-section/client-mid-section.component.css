@@ -1,0 +1,231 @@
+/* .card {
+    box-shadow: 0 4px 11px 8px rgb(69, 69, 94);
+     margin: auto; 
+    text-align: left;
+    widows: 620px;
+    height: 1200px;
+    max-width: 1000px;
+    color: rgb(17, 17, 17);
+    background-color: #fff;
+    float: left;
+    margin-top: 65px;
+    font-size: 16px;
+    font-family: sans-serif;
+    
+}
+.card img{
+	padding-bottom: 20px;
+	padding-left: 8px;
+	padding-right: 8px;
+	padding-top: 8px;
+	height:270px;
+}
+
+.container h3{
+	padding-top: 80px;
+}
+
+.row h3{
+	padding-bottom: 30px;
+}
+.c1{
+	padding-left:20px;
+	padding-right: 20px;
+}
+.property {
+	text-shadow: 1px 1px 2px blue;
+	padding-bottom: 40px;
+}
+@media only screen and (max-width: 600px) {
+	.button5 {
+			max-width: 100%;
+			width: 11%;
+	}
+	.button5 span {
+			font: 15px;
+	}
+}
+
+.col-sm-6 {
+	padding-right: 26px;
+}
+
+.row {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin-right: -15px;
+	margin-left: -15px;
+	margin-bottom: -63px;
+}                .card {
+	box-shadow: 0 4px 11px 8px rgb(69, 69, 94);
+	margin: auto;
+	text-align: left;
+	widows: 620px;
+	height: 500px;
+	max-width: 1000px;
+	color: rgb(17, 17, 17);
+	background-color: #fff;
+	float: none;
+	margin-top: 65px;
+	margin-bottom: 65px;
+	font-size: 16px;
+	font-family: sans-serif;
+	overflow: hidden;
+}
+
+
+
+.property {
+	text-shadow: 1px 1px 2px blue;
+	padding-bottom: 3px;
+}
+
+
+@media only screen and (max-width: 600px) {
+	.button5 {
+			max-width: 100%;
+			width: 11%;
+	}
+	.button5 span {
+			font: 15px;
+	}
+}
+
+.col-sm-6 {
+	padding-right: 26px;
+}
+
+.row {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin-right: -15px;
+	margin-left: -15px;
+	margin-bottom: -63px;
+}
+.button {
+ 
+	position: absolute;
+	right:150px;
+	bottom: 60px;
+
+	padding-left: 150px;
+}
+
+.button1{
+	position:absolute;
+	margin-left: 860px;
+	margin-top: 30px;
+	left: 79%;
+	top: 22px;
+}
+.mid{
+	margin-bottom: 100px;
+} */
+
+#heading {
+    padding-top: 40px;
+    margin-left: 25px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.container {
+    padding-top: 60px;
+}
+
+.column {
+    /* padding-top: 200px; */
+    float: left;
+    width: 33%;
+}
+
+.row {
+    margin-top: -80px;
+    float: left;
+
+}
+
+.heading {
+    margin-top: 100px;
+    margin-left: 228px;
+}
+
+.card-img-top {
+    width: 300px;
+    height: 200px;
+}
+
+.card-text-heading {
+    margin-left: 10px;
+    margin-top: 25px;
+}
+
+
+/* Style the counter cards */
+
+.card {
+    box-shadow: 0 4px 11px 8px rgb(69, 69, 94);
+    /* this adds the "card" effect */
+    margin: left;
+    text-align: left;
+    widows: 620px;
+    height: 400px;
+    max-width: 300px;
+    color: rgb(17, 17, 17);
+    background-color: #fff;
+    float: none;
+    margin-top: 30px;
+    font-size: 16px;
+    font-family: sans-serif;
+    margin-bottom: 70px;
+    padding-bottom: 16px;
+    margin-left: 70px;
+    
+}
+
+.card-text {
+    margin-left: 10px;
+}
+
+
+/* Responsive columns - one column layout (vertical) on small screens */
+
+@media screen and (max-width: 1000px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+    .card-img-top {
+        width: 100%;
+        display: block;
+        margin-bottom: 0px;
+    }
+    .card {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+    
+}
+
+button {
+    margin-left: 95px;
+    margin-top: 10px;
+    /* border: none; */
+    padding: 8px;
+    /* display: inline-block; */
+    color: white;
+    /* background-color: black; */
+    cursor: pointer;
+    width: 100px;
+    /* border-radius: 20px; */
+    font-size: 16px;
+    text-align: center;
+}

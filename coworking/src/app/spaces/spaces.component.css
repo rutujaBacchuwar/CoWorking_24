@@ -1,0 +1,103 @@
+#heading {
+    padding-top: 40px;
+    margin-left: 25px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.container {
+    padding-top: 60px;
+}
+
+.column {
+    /* padding-top: 200px; */
+    float: left;
+    width: 33%;
+}
+
+.row {
+    margin-top: -80px;
+    float: left;
+
+}
+
+.heading {
+    margin-top: 100px;
+    margin-left: 228px;
+}
+
+.card-img-top {
+    width: 300px;
+    height: 200px;
+}
+
+.card-text-heading {
+    margin-left: 10px;
+    margin-top: 25px;
+}
+
+
+/* Style the counter cards */
+
+.card {
+    box-shadow: 0 4px 11px 8px rgb(69, 69, 94);
+    /* this adds the "card" effect */
+    margin: left;
+    text-align: left;
+    widows: 620px;
+    height: 400px;
+    max-width: 300px;
+    color: rgb(17, 17, 17);
+    background-color: #fff;
+    float: none;
+    margin-top: 30px;
+    font-size: 16px;
+    font-family: sans-serif;
+    margin-bottom: 70px;
+    padding-bottom: 16px;
+    margin-left: 70px;
+    
+}
+
+.card-text {
+    margin-left: 10px;
+}
+
+
+/* Responsive columns - one column layout (vertical) on small screens */
+
+@media screen and (max-width: 1000px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+    .card-img-top {
+        width: 100%;
+        display: block;
+        margin-bottom: 0px;
+    }
+    .card {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+    
+}
+
+button {
+    margin-left: 95px;
+    margin-top: 10px;
+    /* border: none; */
+    padding: 8px;
+    /* display: inline-block; */
+    color: white;
+    /* background-color: black; */
+    cursor: pointer;
+    width: 100px;
+    /* border-radius: 20px; */
+    font-size: 16px;
+    text-align: center;
+}

@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>View page</title>
+</head>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+  integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
+<!--wrapper of space name and location-->
+<app-navbar></app-navbar>
+
+
+<div class="names">
+  <div class="container">
+    <br><br><br><br>
+    <br>
+    <h3><b>Space Name:{{arrayOfData.spaceName}}</b></h3><br><br>
+
+    <h3><b>Location:{{arrayOfData.location.locationName}}</b></h3>
+  </div>
+</div>
+
+<br><br><br>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-4">
+      <img class="img-fluid" src="assets/images/cc.jpeg" alt="Card image cap" width=360px>
+    </div>
+    <div class="col-xs-4">&nbsp;&nbsp;&nbsp;&nbsp;
+      <img class="img-fluid" src="assets/images/27.jpeg" alt="Card image cap" width=360px>
+    </div>
+    <div class="col-xs-4">&nbsp;&nbsp;&nbsp;
+      <img class="img-fluid" src="assets/images/48.jpeg" alt="Card image cap" width=360px>
+    </div>
+  </div>
+</div>
+<br>
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-4">
+      <img class="img-fluid" src="assets/images/46.jpeg" alt="Card image cap" width="360">
+    </div>
+    <div class="col-xs-4">
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <img class="img-fluid" src="assets/images/47.jpeg" alt="Card image cap" width="360">
+    </div>
+    <div class="col-xs-4">
+      &nbsp;&nbsp;&nbsp;
+      <img class="img-fluid" src="assets/images/30.jpeg" alt="Card image cap" width="360">
+    </div>
+  </div>
+</div>
+<!-- <br> -->
+<!--wrapper of space name and location ends here-->
+<!-- end of image -->
+<br><br>
+<!--table starts here-->
+<div class="container">
+  <div class="row">
+    <div class="col-md-16">
+      <div class="listing-detail-section shadow-card" id="rates">
+        <div class="working-hours">
+          <div class="row rate-header">
+            <div class="col-xs-3">
+              <p>&nbsp;&nbsp;Space Type</p>
+            </div>&nbsp;&nbsp;
+            <div class="col-xs-2 ">
+              <p>Capacity</p>
+            </div>&nbsp;&nbsp;
+            <div class="col-xs-2">
+              <p>Hourly Rate</p>
+            </div>&nbsp;&nbsp;&nbsp;
+            <div class="col-xs-2">
+              <p>Daily Rate</p>
+            </div>&nbsp;
+            <div class="col-xs-2">
+              <p>Monthly Rate</p>
+            </div>&nbsp;
+            <div class="col-xs-2 center">
+              <p>Book</p>
+            </div>
+          </div>
+
+
+          <div class="space" *ngFor="let a of arrayOfCategories">
+            <div class="row rate-inner">
+
+              <div class="col-xs-2 main-grid">
+                <div class="block">
+                  <p class="first room">{{a.categoryName}}</p>
+                </div>
+
+              </div>
+
+              &nbsp;
+              <div class="col-xs-10 main-grid">
+
+
+                <div class="row rate-row even">
+                  <div class="col-xs-2">
+                    <div class="block">
+                      <p class="first room">&nbsp;{{a.capacity}}</p>
+
+                    </div>
+                  </div>
+
+
+                  <div class="col-xs-2">
+                    <div class="block">
+
+                      <p class="first room">{{a.hourlyPrice}}/hour</p>
+
+                    </div>
+                  </div>&nbsp;&nbsp;&nbsp;&nbsp;
+
+                  <div class="col-xs-2">
+                    <div class="block">
+
+                      <p>{{a.dailyPrice}}/day</p>
+
+                    </div>
+                  </div>&nbsp;&nbsp;
+
+                  <div class="col-xs-2">
+                    <div class="block">
+                      <p>{{a.monthlyPrice}}/month</p>
+                    </div>
+                  </div>
+
+                  &nbsp;&nbsp;
+
+                  <div class="col-xs-2">
+                    <div class="block">
+
+
+
+
+                      <div>
+                        <button (click)="pushthisthing(a)" class="btn btn-dark w3-large" data-toggle="modal"
+                          data-target="#Modal" style="width: 90px;">
+                          Select</button>
+
+                      </div>
+
+                      <div class="modal fade" id="Modal">
+                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                          <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                              <h4 class="modal-title">Booking</h4>
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                              <div class="form-group">
+                                <div class="row">
+                                  <div class="col-sm-6">
+
+                                    <h4>space type</h4>
+                                    <select #name class="space">
+                                      <!-- <option>select</option> -->
+                                      <option>{{selectedThing.categoryName}}</option>
+
+
+                                    </select>
+                                  </div>
+
+
+
+                                  <div class="col-sm-6">
+                                    <h4>Select Plans</h4>
+
+
+                                    <select #rate name="select plans">
+
+                                      <option>{{selectedThing.hourlyPrice}}/hour</option><br><br>
+                                      <option>{{selectedThing.dailyPrice}}/day</option>
+                                      <option>{{selectedThing.monthlyPrice}}/month</option>
+                                    </select>
+
+                                  </div>
+                                </div>
+                              </div>
+
+                              <br><br><br><br><br><br>
+                              <div class="row">
+
+                                <h4>Select Duration</h4>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input #count class="input-field" type="number" name="select space type">
+
+                              </div>
+
+                              <!-- </div> -->
+                              <br><br>
+                              <button (click)="addSpace(a,rate.value, count.value, name.value)"
+                                class="btn btn-dark w3-large" data-dismiss="modal">submit</button>
+
+
+
+                              <div class="modal fade " id="Modal ">
+                                <div class="modal-dialog modal-dialog-centered modal-lg ">
+                                  <div class="modal-content ">
+
+                                    <!-- Modal Header -->
+                                    <div class="modal-header ">
+                                      <h4 class="modal-title ">Booking</h4>
+                                      <button type="button " class="close " data-dismiss="modal ">&times;</button>
+                                    </div>
+                                   
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--table ends here-->
+
+<br>
+
+
+
+<!-- Additional-Amenities -->
+
+
+
+
+
+<br><br>
+
+
+
+
+<div class="container">
+  <h2><b>&nbsp;Additional Amenities</b></h2>
+  <br>
+  <br>
+  <div class="amenities">
+    <div class="row">
+
+
+
+      <div class="col-sm-3">
+
+        <img src="https://img.icons8.com/wired/94/000000/tea.png">
+
+
+        <p class="amenity-name">Tea/Coffee</p>
+      </div>
+
+
+
+
+
+      <div class="col-sm-3">
+
+
+        <img src="https://img.icons8.com/wired/94/000000/air-conditioner.png">
+
+
+        <p class="amenity-name">AC</p>
+      </div>
+
+
+
+
+
+
+      <div class="col-sm-3">
+
+        <img src="https://img.icons8.com/ios/94/000000/valet-parking.png">
+
+
+        <p class="amenity-name">Parking</p>
+      </div>
+
+
+      <div class="col-sm-3">
+
+
+        <img src="https://img.icons8.com/ios/94/000000/audience.png">
+
+        <p class="amenity-name">Event Area</p>
+      </div>
+
+
+
+
+
+
+
+
+      <div class="col-sm-3">
+
+        <br>
+        <img src="https://img.icons8.com/ios/94/000000/waiting-room.png">
+        <p class="amenity-name">Wellness Room</p>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="col-sm-3">
+
+        <br>
+        <img src="https://img.icons8.com/wired/94/000000/service.png">
+        <p class="amenity-name">Security</p>
+      </div>
+
+
+
+
+
+      <div class="col-sm-3">
+
+
+        <br>
+        <img src="https://img.icons8.com/wired/94/000000/voip-gateway.png">
+        <p class="amenity-name">Reception</p>
+      </div>
+      <div class="col-sm-3">
+
+        <br>
+
+        <img src="https://img.icons8.com/ios/94/000000/dining-room.png">
+        <p class="amenity-name">Cafetaria</p>
+      </div>
+
+
+
+
+
+      <div class="col-sm-3">
+
+        <br>
+        <img src="https://img.icons8.com/wired/94/000000/print.png">
+        <p class="amenity-name">Print/Scan/Copy</p>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+      <div class="col-sm-3">
+
+        <br>
+        <img src="https://img.icons8.com/ios/94/000000/network.png">
+        <p class="amenity-name">Virtual Office</p><br><br>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+
+
+  <br>
+  <!-- Additional-Amenities ends here -->
+
+  <br><br>
+
+  <!--   Basic-Amenities -->
+  <div class="container">
+
+    <div class="Basic-Amenities">
+
+      <h3><b>Basic-Amenities</b></h3>
+      <br>
+      <div class="row">
+        <div class="col-sm-4">
+          <img src="assets/icons/wi-fi.png" alt="Wi-fi logo" width="150px" height="100px"><br>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;Wi-Fi</p><br>
+        </div><br>
+
+        <div class="col-sm-4">
+          <img src="assets/icons/housekeeping.png" alt="House-keeping logo" width="150px" height="100px"><br>
+          <p>House-Keeping</p>
+        </div>
+
+        <div class="col-sm-4">
+          <img src="assets/icons/access.png" alt="24*7 access" width="150px" height="100px"><br>
+          <p>&nbsp;&nbsp;24*7 Access</p>
+        </div>
+
+        <div class="col-sm-4">
+          <img src="assets/icons/washroom.png" alt="washroom" width="150px" height="100px"><br>
+          <p>Washroom</p><br><br><br><br>
+        </div>
+
+
+
+
+        <div class="col-sm-4">
+          <img src="assets/icons/filter.png" alt="drinking water logo" width="150px" height="100px"><br>
+          <p>Drinking Water</p>
+        </div>
+
+
+
+
+        <div class="col-sm-3">
+          <img src="assets/icons/backup.png" alt="power backup logo" width="150px" height="100px">
+          <br>
+          <p>Power-Backup</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br><br>
+
+  <!-- Basic-Amenities ends here -->
+
+
+
+
+
+
+
+
+
+  <div>
+
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button class="btn btn-dark w3-large" data-toggle="modal" data-target="#Modal1" style="width: 250px;"
+      (click)="openModal(content)">
+      Login to Book</button>
+  </div>
+
+  <ng-template #content let-c="close" let-d="dismiss">
+      <div class="modal-content">
+          <div class="modal-header" data-keyboard="false" data-backdrop="static">
+              <!-- <h4 class="modal-title">Login</h4> -->
+              <h3 style="color: white">Sign In</h3>
+              <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+  <span aria-hidden="true" style="color: white">&times;</span>
+</button>
+          </div>
+          <div class="modal-body">
+              <form>
+                  <div class="input-group form-group">
+                      <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="fas fa-user"></i></span>
+                      </div>
+                      <input type="text" class="form-control" #username placeholder="username">
+                  </div>
+                  <div class="input-group form-group">
+                      <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="fas fa-key"></i></span>
+                      </div>
+                      <input type="password" class="form-control" #password placeholder="password">
+                  </div>
+                  <div class="form-group">
+                      <!-- <input type="submit" value="ClientLogin"  class="btn float-right login_btn" (click)="c('Close click')"  (click)="authenticateUser(name.value, password.value)"> -->
+                      <input type="submit" value="Login" (click)="authenticateUser(username.value, password.value)" class="btn float-right login_btn" (click)="c('Close click')">
+                      <!-- <button type="button" class="btn btn-login float-right"
+                 (click)="authenticateUser(username.value, password.value)">Submit
+                </button> -->
+                  </div>
+                  <a  class="float-center" (click)="c('Close click')" (click)="openRegistrationModal(contents)">New user?</a>
+              </form>
+          </div>
+      </div>
+  </ng-template>
+
+<!-- registration -->
+<ng-template #contents let-c="close" let-d="dismiss">
+<div class="modal-content">
+  <div class="modal-header" data-keyboard="false" data-backdrop="static">
+      <h4 class="modal-title" style="color: white">Register</h4>
+      <button type="button" style="color: white" class="close" aria-label="Close" (click)="d('Cross click')">
+<span aria-hidden="true">&times;</span>
+</button>
+  </div>
+  <div class="modal-body">
+      <form>
+          <div class="input-group form-group">
+              <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-user"></i></span>
+              </div>
+              <input type="text" class="form-control" placeholder="username" #user required>
+          </div>
+          <div class="input-group form-group">
+              <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-envelope icon"></i></span>
+              </div>
+              <input type="text" class="form-control" placeholder="email" #email required>
+          </div>
+          <div class="input-group form-group">
+              <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-key"></i></span>
+              </div>
+              <input type="password" class="form-control" placeholder="password" #pass required>
+          </div>
+          <div class="input-group form-group">
+              <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-phone icon"></i></span>
+              </div>
+              <input type="number" class="form-control" placeholder="contact" #contact required>
+          </div>
+          <div class="input-group form-group">
+              <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-address-card icon"></i></span>
+              </div>
+              <input type="number" class="form-control" placeholder="AadharNumber" #uid required>
+          </div>
+          <div class="input-group form-group">
+              <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-map-marker icon"></i></span>
+              </div>
+              <input type="text" class="form-control" placeholder="Address" #address required>
+          </div>
+          <div class="form-group1">
+              <input type="submit" value="Sign up" class="btn float-right login_btn" (click)="c('Close click')" style="padding-right:20px " (click)="registerUser(user.value,email.value,pass.value,contact.value,uid.value,address.value)">
+          </div>
+      </form>
+  </div>
+</div>
+</ng-template>
+
+
+
+  
+</div>
+<br>
+<br>
+<app-footer></app-footer>
+
+</html>
+
+
+
+
+
