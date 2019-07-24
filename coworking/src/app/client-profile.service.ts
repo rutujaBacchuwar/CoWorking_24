@@ -13,12 +13,12 @@ export class ClientProfileService {
   }
 
 
-  getClientDataBasedOnPrice():any{
-    return this.httpClient.get(`http://13.235.110.75:8006/v1/api/contains/priceRecommendation`)
+  getClientDataBasedOnPrice(username):any{
+    return this.httpClient.get(`http://13.235.110.75:8006/v1/api/contains/priceRecommendation/${username}`)
 
   }
 
-  getClientDataBasedOnLocation():any{
-    return this.httpClient.get('http://13.235.110.75:8006/v1/api/located/recommendationLoc')
+  getClientDataBasedOnLocation(username):any{
+    return this.httpClient.get(`http://13.235.110.75:8006/v1/api/located/recommendationLoc/${username}`)
   }
 }

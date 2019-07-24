@@ -11,6 +11,6 @@ export class ClientDashboardService {
 
 
   getSpaceDetailsByUserName(username):any{
-    return this.httpClient.get(`http://13.235.110.75:8090/api/v1/books/${username}`);
+    return this.httpClient.get(`http://13.235.110.75:8091/api/v1/books/${username}`);
   }
 }

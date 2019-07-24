@@ -6,6 +6,7 @@
 }
 .nav-link {
     font-size: 22px;
+    /* margin-left: -50px; */
 }
 .navbar-brand {
     padding-left: 120px;
@@ -18,7 +19,7 @@
     font-size: 20px;
 }
 .login {
-    padding-right: 120px;
+    padding-right: 10px;
     padding-left: 20px;
 }
 .image {

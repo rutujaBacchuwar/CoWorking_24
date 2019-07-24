@@ -134,6 +134,7 @@ export class BookingComponent implements OnInit {
 
   bookSpace(value): any {
     console.log(this.selectedSpaces);
+    console.log(this.total);
 
     let bookingSpace = {
       spaceId: this.arrayOfData.spaceId,

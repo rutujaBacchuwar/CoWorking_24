@@ -27,23 +27,24 @@
                         <mat-form-field>
 
                             <input matInput type="number" placeholder="Length" [(ngModel)]="Length" formControlName="LengthCtrl" required>
-                            <mat-hint>Length of space in sq.m</mat-hint>
+                            <mat-hint>Length of space in ft.</mat-hint>
                         </mat-form-field>&nbsp;
                         <mat-form-field>
 
                             <input matInput type="number" placeholder="Breadth" [(ngModel)]="Breadth" formControlName="BreadthCtrl" required>
-                            <mat-hint>Breadth of space in sq.m</mat-hint>
+                            <mat-hint>Breadth of space in ft.</mat-hint>
                         </mat-form-field>
                     </div>
                     <mat-form-field>
-                            <input matInput placeholder="spaceImageUrl" [(ngModel)]="spaceImageUrl" formControlName="spaceImageUrlCtrl" required>
+                            <input matInput placeholder="Space Image Url" [(ngModel)]="spaceImageUrl" formControlName="spaceImageUrlCtrl" required>
     
                         </mat-form-field>
                        
 
-                    <div class="next"><br><br><br><br><br><br><br><br><br><br><br>
-                        <button mat-raised-button matStepperNext color="primary">Next</button><br><br><br><br><br><br>
+                    <div class="next"><br><br><br><br>
+                        <button mat-raised-button matStepperNext color="primary">Next</button><br>
                     </div>
+                    <br><br><br>
                 </div>
 
             </form>
@@ -287,14 +288,14 @@
                 <br>
                 <div class="row">
                     <div *ngFor="let a of allSpaces">
-                        <mat-card>{{a.categoryName}} <br>
+                        <mat-card style="color: white">{{a.categoryName}} <br>
                             <p>added successfully!</p>
 
                         </mat-card>
                     </div>
                 </div>
 
-                <br><br><br><br><br><br>
+                <br><br><br><br><br>
 
 
                     <div class="next">
@@ -353,6 +354,7 @@
                                   <option value="Kolkata">Kolkata</option>
                                   <option value="Lucknow">Lucknow</option>
                                   <option value="Manipuri">Manipuri</option>
+                                  <option value="Mumbai">Mumbai</option>
                                   <option value="Mangaluru">Mangaluru</option>
                                   <option value="Mysore">Mysore</option>
                                   <option value="Maharashtra">Maharashtra</option>
@@ -424,9 +426,9 @@
                     <mat-form-field>
                         <input matInput type="number" placeholder="Pin code" formControlName="PincodeCtrl" required>
                     </mat-form-field>
-                    <div> <br>
+                    <div>
                         <button mat-raised-button matStepperPrevious color="primary">Back</button>
-                        <button mat-raised-button matStepperNext color="primary">Next</button><br><br><br><br>
+                        <button mat-raised-button matStepperNext color="primary">Next</button>
                     </div>
                 </div>
             </form>
@@ -490,13 +492,13 @@
                     </ng-template>
                     <img src="https://img.icons8.com/color/96/000000/ok.png" width=100px height=100px><br><br>
 
-                    <h1>
+                    <h1 style="color: black">
                         Thank you!!!
                     </h1>
                     <h3>Your space details has been successfully added!!! We will get back to you soon...</h3>
                 </div><br><br><br><br>
 
-                <button mat-button (click)="BackToHome()">Back to Home!</button>
+                <button style="font-size: 20px" mat-button (click)="BackToHome()">Back to Dashboard!</button>
             </div>
         </mat-step>
     </mat-horizontal-stepper>

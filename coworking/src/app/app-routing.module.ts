@@ -25,6 +25,7 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'register',component:RegistrationComponent},
   {path:'client-login',component:ClientProfileComponent},
+  {path:'client-login/:username',component:ClientProfileComponent},
   {path:'owner-login',component:OwnerDashboardComponent},
   {path:'edit',component:EditComponent},
   {path:'owner-login/:name',component:OwnerDashboardComponent},

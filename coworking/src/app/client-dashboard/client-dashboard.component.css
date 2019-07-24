@@ -218,3 +218,10 @@ body {
 h4{
     font-size: 22px;
 }
+
+
+.my-card-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}

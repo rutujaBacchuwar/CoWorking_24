@@ -35,9 +35,9 @@ export class SpaceService {
     this.myVar1=JSON.parse(sessionStorage.getItem('startDate'));
     this.myVar2=JSON.parse(sessionStorage.getItem('endDate'));
     
-    if(this.username==null){
+    // if(this.username==null){
       
-    }
+    // }
 
     this.userService.getDataByName(this.username).subscribe(data=>{
 
@@ -47,7 +47,7 @@ export class SpaceService {
 
     })
 
-
+    console.log(bookInfo.price);
     let bookingDetails = {
       startDate: this.myVar1,
       endDate: this.myVar2,
@@ -64,18 +64,14 @@ export class SpaceService {
             spaceId: bookInfo.spaceId,
             spaceName: bookInfo.spaceName,
             totalprice: bookInfo.price,
-          }
-
-       
+          }     
         }
      }
     }
 
+
     console.log(bookingDetails)
-
-
      return this.httpClient.post('http://13.235.110.75:8091/api/v1/book',bookingDetails);
-
     }
 
 }

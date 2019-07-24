@@ -14,7 +14,7 @@ export class ClientMidSectionComponent implements OnInit {
   address:string
  
   constructor(private clientprofileService:ClientProfileService,private router:Router) { }
-
+  username:any;
   ngOnInit() {
   
     this.getRecommendationByGivingAddress();
@@ -33,7 +33,9 @@ export class ClientMidSectionComponent implements OnInit {
 
   getRecommendationBasedOnPrice():any{
     // this.address=sessionStorage.getItem('address');
-    this.clientprofileService.getClientDataBasedOnPrice().subscribe(data=>{
+    this.username=sessionStorage.getItem('username');
+    console.log(this.username)
+    this.clientprofileService.getClientDataBasedOnPrice(this.username).subscribe(data=>{
       console.log("Price based Recommandation")
       this.arrayOfPriceRecommandation=data;
       console.log(data);
@@ -41,7 +43,9 @@ export class ClientMidSectionComponent implements OnInit {
   }
 
   getRecommendationBasedOnLocation():any{
-    this.clientprofileService.getClientDataBasedOnLocation().subscribe(data=>
+    this.username=sessionStorage.getItem('username');
+    console.log(this.username)
+    this.clientprofileService.getClientDataBasedOnLocation(this.username).subscribe(data=>
       {
         console.log("Location Based Recommandation")
         this.arrayOfLocationRecommandation=data;
