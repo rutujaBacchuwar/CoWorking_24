@@ -37,34 +37,34 @@ public  interface ContainsRepository extends Neo4jRepository<Space,Long> {
     @Query("MATCH (u:User)-[b:Booked]->(c:Category)<-[:Contains]-(m:Space) WHERE u.name={name} RETURN c.categoryName")
     public ArrayList<String> getCategoryName(String name);
 
-    @Query("MATCH (u:User)-[b:Booked]->(c:Category)<-[:Contains]-(m:Space) WITH distinct c as c MATCH (l:Category)<-[:Contains]-(s:Space) WHERE  l.price>=500 and l.price<=1000 and l.categoryName={categoryName} and s.spaceId<>c.space RETURN l,s")
-    public Collection<Space> recommendationPriceRange0(String categoryName);
+    @Query("MATCH (u:User)-[b:Booked]->(c:Category)<-[:Contains]-(m:Space)  WHERE u.name={name} WITH distinct c as c MATCH (l:Category)<-[:Contains]-(s:Space) WHERE l.price>=500 and l.price<=1000 and l.categoryName={categoryName} and s.spaceId<>c.space RETURN l,s")
+    public Collection<Space> recommendationPriceRange0(String categoryName,String name);
 
-    @Query("MATCH (u:User)-[b:Booked]->(c:Category)<-[:Contains]-(m:Space) WITH distinct c as c MATCH (l:Category)<-[:Contains]-(s:Space) WHERE l.price>1000 and l.price<=2000 and l.categoryName={categoryName} and s.spaceId<>c.space RETURN l,s")
-    public Collection<Space> recommendationPriceRange1(String categoryName);
+    @Query("MATCH (u:User)-[b:Booked]->(c:Category)<-[:Contains]-(m:Space) WHERE u.name={name} WITH distinct c as c MATCH (l:Category)<-[:Contains]-(s:Space) WHERE l.price>1000 and l.price<=2000 and l.categoryName={categoryName} and s.spaceId<>c.space RETURN l,s")
+    public Collection<Space> recommendationPriceRange1(String categoryName,String name);
 
-    @Query("MATCH (u:User)-[b:Booked]->(c:Category)<-[:Contains]-(m:Space) WITH distinct c as c MATCH (l:Category)<-[:Contains]-(s:Space) WHERE l.price>2000 and l.price<=3000 and l.categoryName={categoryName} and s.spaceId<>c.space RETURN l,s")
-    public Collection<Space> recommendationPriceRange2(String categoryName);
+    @Query("MATCH (u:User)-[b:Booked]->(c:Category)<-[:Contains]-(m:Space)  WHERE u.name={name} WITH distinct c as c MATCH (l:Category)<-[:Contains]-(s:Space) WHERE l.price>2000 and l.price<=3000 and l.categoryName={categoryName} and s.spaceId<>c.space RETURN l,s")
+    public Collection<Space> recommendationPriceRange2(String categoryName,String name);
 
-    @Query("MATCH (u:User)-[b:Booked]->(c:Category)<-[:Contains]-(m:Space) WITH distinct c as c MATCH (l:Category)<-[:Contains]-(s:Space) WHERE l.price>3000 and l.price<=4000 and l.categoryName={categoryName} and s.spaceId<>c.space RETURN l,s")
-    public Collection<Space> recommendationPriceRange3(String categoryName);
+    @Query("MATCH (u:User)-[b:Booked]->(c:Category)<-[:Contains]-(m:Space)  WHERE u.name={name} WITH distinct c as c MATCH (l:Category)<-[:Contains]-(s:Space) WHERE l.price>3000 and l.price<=4000 and l.categoryName={categoryName} and s.spaceId<>c.space RETURN l,s")
+    public Collection<Space> recommendationPriceRange3(String categoryName,String name);
 
-    @Query("MATCH (u:User)-[b:Booked]->(c:Category)<-[:Contains]-(m:Space) WITH distinct c as c MATCH (l:Category)<-[:Contains]-(s:Space) WHERE l.price>4000 and l.price<=5000 and l.categoryName={categoryName} and s.spaceId<>c.space RETURN l,s")
-    public Collection<Space> recommendationPriceRange4(String categoryName);
+    @Query("MATCH (u:User)-[b:Booked]->(c:Category)<-[:Contains]-(m:Space)  WHERE u.name={name} WITH distinct c as c MATCH (l:Category)<-[:Contains]-(s:Space) WHERE l.price>4000 and l.price<=5000 and l.categoryName={categoryName} and s.spaceId<>c.space RETURN l,s")
+    public Collection<Space> recommendationPriceRange4(String categoryName,String name);
 
-    @Query("MATCH (u:User)-[b:Booked]->(c:Category)<-[:Contains]-(m:Space) WITH distinct c as c MATCH (l:Category)<-[:Contains]-(s:Space) WHERE l.price>5000 and l.price<=6000 and l.categoryName={categoryName} and s.spaceId<>c.space RETURN l,s")
-    public Collection<Space> recommendationPriceRange5(String categoryName);
+    @Query("MATCH (u:User)-[b:Booked]->(c:Category)<-[:Contains]-(m:Space)  WHERE u.name={name} WITH distinct c as c MATCH (l:Category)<-[:Contains]-(s:Space) WHERE l.price>5000 and l.price<=6000 and l.categoryName={categoryName} and s.spaceId<>c.space RETURN l,s")
+    public Collection<Space> recommendationPriceRange5(String categoryName,String name);
 
-    @Query("MATCH (u:User)-[b:Booked]->(c:Category)<-[:Contains]-(m:Space) WITH distinct c as c MATCH (l:Category)<-[:Contains]-(s:Space) WHERE l.price>6000 and l.price<=7000 and l.categoryName={categoryName} and s.spaceId<>c.space RETURN l,s")
-    public Collection<Space> recommendationPriceRange6(String categoryName);
+    @Query("MATCH (u:User)-[b:Booked]->(c:Category)<-[:Contains]-(m:Space)  WHERE u.name={name} WITH distinct c as c MATCH (l:Category)<-[:Contains]-(s:Space) WHERE l.price>6000 and l.price<=7000 and l.categoryName={categoryName} and s.spaceId<>c.space RETURN l,s")
+    public Collection<Space> recommendationPriceRange6(String categoryName,String name);
 
-    @Query("MATCH (u:User)-[b:Booked]->(c:Category)<-[:Contains]-(m:Space) WITH distinct c as c MATCH (l:Category)<-[:Contains]-(s:Space) WHERE l.price>7000 and l.price<=8000 and l.categoryName={categoryName} and s.spaceId<>c.space RETURN l,s")
-    public Collection<Space> recommendationPriceRange7(String categoryName);
+    @Query("MATCH (u:User)-[b:Booked]->(c:Category)<-[:Contains]-(m:Space)  WHERE u.name={name} WITH distinct c as c MATCH (l:Category)<-[:Contains]-(s:Space) WHERE l.price>7000 and l.price<=8000 and l.categoryName={categoryName} and s.spaceId<>c.space RETURN l,s")
+    public Collection<Space> recommendationPriceRange7(String categoryName,String name);
 
-    @Query("MATCH (u:User)-[b:Booked]->(c:Category)<-[:Contains]-(m:Space) WITH distinct c as c MATCH (l:Category)<-[:Contains]-(s:Space) WHERE l.price>8000 and l.price<=9000 and l.categoryName={categoryName} and s.spaceId<>c.space RETURN l,s")
-    public Collection<Space> recommendationPriceRange8(String categoryName);
+    @Query("MATCH (u:User)-[b:Booked]->(c:Category)<-[:Contains]-(m:Space)  WHERE u.name={name} WITH distinct c as c MATCH (l:Category)<-[:Contains]-(s:Space) WHERE l.price>8000 and l.price<=9000 and l.categoryName={categoryName} and s.spaceId<>c.space RETURN l,s")
+    public Collection<Space> recommendationPriceRange8(String categoryName,String name);
 
-    @Query("MATCH (u:User)-[b:Booked]->(c:Category)<-[:Contains]-(m:Space) WITH distinct c as c MATCH (l:Category)<-[:Contains]-(s:Space) WHERE l.price>9000 and l.categoryName={categoryName} and s.spaceId<>c.space RETURN l,s")
-    public Collection<Space> recommendationPriceRange9(String categoryName);
+    @Query("MATCH (u:User)-[b:Booked]->(c:Category)<-[:Contains]-(m:Space)  WHERE u.name={name} WITH distinct c as c MATCH (l:Category)<-[:Contains]-(s:Space) WHERE l.price>9000 and l.categoryName={categoryName} and s.spaceId<>c.space RETURN l,s")
+    public Collection<Space> recommendationPriceRange9(String categoryName,String name);
 
 }

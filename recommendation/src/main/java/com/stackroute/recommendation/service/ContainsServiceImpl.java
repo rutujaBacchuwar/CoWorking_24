@@ -57,19 +57,19 @@ public class ContainsServiceImpl implements ContainsService {
                     System.out.println("****"+ list.get(j));
                     if (list.get(j) >= 500 && list.get(j) <= 1000) {
                         System.out.println("1");
-                        collection = containsRepository.recommendationPriceRange0(list1.get(i));
+                        collection = containsRepository.recommendationPriceRange0(list1.get(i),name);
                         for (Space s:collection){
                             finalList.add(s);
                         }
                     } else if (list.get(j) > 1000 && list.get(j) <= 2000) {
                         System.out.println("2");
-                        collection = containsRepository.recommendationPriceRange1(list1.get(i));
+                        collection = containsRepository.recommendationPriceRange1(list1.get(i),name);
                         for (Space s:collection){
                             finalList.add(s);
                         }
                     } else if (list.get(j) > 2000 && list.get(j) <= 3000) {
                         System.out.println("3");
-                        collection= containsRepository.recommendationPriceRange2(list1.get(i));
+                        collection= containsRepository.recommendationPriceRange2(list1.get(i),name);
                         System.out.println(collection+""+list1.get(i));
                         for (Space s:collection){
                             finalList.add(s);
@@ -77,44 +77,44 @@ public class ContainsServiceImpl implements ContainsService {
                        //String[] s= collection.toArray();
                     } else if (list.get(j) > 3000 && list.get(j) <= 4000) {
                         System.out.println("4");
-                        collection= containsRepository.recommendationPriceRange3(list1.get(i));
+                        collection= containsRepository.recommendationPriceRange3(list1.get(i),name);
                         for (Space s:collection){
                             finalList.add(s);
                         }
                     } else if (list.get(j) > 4000 && list.get(j) <= 5000) {
                         System.out.println("5");
-                       collection= containsRepository.recommendationPriceRange4(list1.get(i));
+                       collection= containsRepository.recommendationPriceRange4(list1.get(i),name);
                         for (Space s:collection){
                             finalList.add(s);
                         }
                     } else if (list.get(j) > 5000 && list.get(j) <= 6000) {
                         System.out.println("6");
-                       collection= containsRepository.recommendationPriceRange5(list1.get(i));
+                       collection= containsRepository.recommendationPriceRange5(list1.get(i),name);
                         for (Space s:collection){
                             finalList.add(s);
                         }
                     } else if (list.get(j) > 6000 && list.get(j) <= 7000) {
                         System.out.println("7");
-                      collection=  containsRepository.recommendationPriceRange6(list1.get(i));
+                      collection=  containsRepository.recommendationPriceRange6(list1.get(i),name);
                         for (Space s:collection){
                             finalList.add(s);
                         }
 
                     } else if (list.get(j) > 7000 && list.get(j) <= 8000) {
                         System.out.println("8");
-                       collection= containsRepository.recommendationPriceRange7(list1.get(i));
+                       collection= containsRepository.recommendationPriceRange7(list1.get(i),name);
                         for (Space s:collection){
                             finalList.add(s);
                         }
                     } else if (list.get(j) > 8000 && list.get(j) <= 9000) {
                         System.out.println("9");
-                       collection=containsRepository.recommendationPriceRange8(list1.get(i));
+                       collection=containsRepository.recommendationPriceRange8(list1.get(i),name);
                         for (Space s:collection){
                             finalList.add(s);
                         }
                     }
                  else {
-                        collection = containsRepository.recommendationPriceRange9(list1.get(i));
+                        collection = containsRepository.recommendationPriceRange9(list1.get(i),name);
                         for (Space s : collection) {
                             finalList.add(s);
                         }
